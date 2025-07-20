@@ -1,0 +1,16 @@
+:root {
+  --mint: #659f8f;
+  --dark-mint: #313131
+  padding: 8em 4em;
+ 
+
+}
+
+body {
+  background-color: var(--mint);
+  color: rgba(19, 18, 18, 0.756);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  
+}
+
