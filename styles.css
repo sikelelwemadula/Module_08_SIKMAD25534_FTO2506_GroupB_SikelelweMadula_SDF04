@@ -1,8 +1,8 @@
 :root {
  /*Repeated elements that are being catogarised for synergy*/
   --mint: #659f8f;
-  --dark-mint: #313131;
-  --salmon: rgba(220, 110, 67, 0.892);
+  --dark: #313131;
+  --salmon: rgba(234, 117, 71, 0.892);
   --rounded: 10px;
   padding: 8em 4em;
  
@@ -11,7 +11,7 @@
 
 body {
   background-color: var(--mint);
-  color: rgba(19, 18, 18, 0.756);
+  color: var(--dark);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9em;
   height: 100vh;
@@ -55,6 +55,10 @@ ul {
   list-style-type: none;
   line-height: 1.9em;
   margin-top: 0;
+}
+
+.flex {
+   border-top: 0.2em solid var(--salmon);
 }
 
 /*Setting up the layout for the desktop footer*/
@@ -114,8 +118,38 @@ ul {
 
 .layout {
   display: grid;
+  grid-gap: 0.5em;
   grid-template-areas: 
   'header header  one two'
   'main right quick tech'
   'footer footer footer footer';
+}
+
+/*Responsive layout Media Queries*/
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
+}
+
+@media (max-width: 768px){
+  .Subscribe { grid-area: 1/ span 6;}
+  .quick-links {grid-area: 3; span 3;}
+  #my-email { grid-area: 2/ span 3;}
+  .button { grid-area: 2/ span 3;}
+  .quick { grid-area: 4/ span 3;}
+  .tech { grid-area: 4/  span 3;}
+  .w-auto-h-7 { grid-area: 5/ span 6;} 
+}
+ 
+
+
+@media only screen and (min-width: 768px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 2 / span 1;}
+  .item5 {grid-area: 3 / span 6;}
 }
