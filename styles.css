@@ -13,7 +13,7 @@ body {
   background-color: var(--mint);
   color: rgba(19, 18, 18, 0.756);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
   height: 100vh;
   
 }
@@ -37,4 +37,85 @@ body {
   height: 3em;
   width: 12em;
 
+}
+
+ .w-auto-h-7 {
+  width: auto;
+  height: 7ch;
+
+}
+/*List Styling*/
+h2 {
+  margin-bottom: 0.5em;
+  font-weight: 150;
+  font-size: 1.3em;
+}
+
+ul {
+  list-style-type: none;
+  line-height: 1.9em;
+  margin-top: 0;
+}
+
+/*Setting up the layout for the desktop footer*/
+.quick-links {
+  display: flex;
+  
+}
+/*
+.layout {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 4em 4em 4em 5em;
+}
+
+.subscribe {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.my-email {
+
+}
+
+.button {
+
+}
+
+.quick {
+  grid-column-start: 7;
+  grid-column-end: 9;
+}
+.quick-1 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+}
+
+.tech {
+  grid-column-start: 10;
+  grid-column-end: 11;
+}
+.tech-1 {
+  grid-column-start: 10;
+  grid-column-end: 11;
+} */
+
+.Subscribe { grid-area: header; }
+.quick-1 { grid-area: one; }
+.tech-1 { grid-area: two; }
+#my-email { grid-area: main; }
+.button { grid-area: right; }
+.quick { grid-area: quick; }
+.tech { grid-area: tech; }
+.w-auto-h-7 { grid-area: footer; }
+
+
+
+.layout {
+  display: grid;
+  grid-template-areas: 
+  'header header  one two'
+  'main right quick tech'
+  'footer footer footer footer';
 }
