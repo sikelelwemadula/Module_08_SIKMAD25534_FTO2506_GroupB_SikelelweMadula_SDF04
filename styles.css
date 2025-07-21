@@ -59,6 +59,7 @@ ul {
 
 .flex {
    border-top: 0.2em solid var(--salmon);
+   border-bottom-length: 80px;
 }
 
 /*Setting up the layout for the desktop footer*/
@@ -126,30 +127,30 @@ ul {
 }
 
 /*Responsive layout Media Queries*/
-@media only screen and (max-width: 600px) {
-  .item1 {grid-area: 1 / span 6;}
-  .item2 {grid-area: 2 / span 6;}
-  .item3 {grid-area: 3 / span 6;}
-  .item4 {grid-area: 4 / span 6;}
-  .item5 {grid-area: 5 / span 6;}
-}
 
 @media (max-width: 768px){
   .Subscribe { grid-area: 1/ span 6;}
-  .quick-links {grid-area: 3; span 3;}
+  .quick-links {grid-area: 3/ span 3;}
   #my-email { grid-area: 2/ span 3;}
   .button { grid-area: 2/ span 3;}
   .quick { grid-area: 4/ span 3;}
   .tech { grid-area: 4/  span 3;}
   .w-auto-h-7 { grid-area: 5/ span 6;} 
+} 
+
+@media only screen and (max-width: 700px) {
+  .quick-links {
+    flex-direction: column;
+  }
+  .Subscribe { grid-area: 1/ span 6;}
+  /*.quick-links {grid-area: 4/ span 6;}*/
+  #my-email { grid-area: 2/ span 3;}
+  .button { grid-area: 3/ span 6;}
+  .quick { grid-area: 4/ span 6;}
+  .tech { grid-area: 4/  span 6;}
+  .w-auto-h-7 { grid-area: 5/ span 6;}
 }
  
 
 
-@media only screen and (min-width: 768px) {
-  .item1 {grid-area: 1 / span 6;}
-  .item2 {grid-area: 2 / span 1;}
-  .item3 {grid-area: 2 / span 4;}
-  .item4 {grid-area: 2 / span 1;}
-  .item5 {grid-area: 3 / span 6;}
-}
+
